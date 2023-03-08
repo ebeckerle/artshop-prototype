@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-contents {
+    display: flex;
+}
+
+.header-logged-in{
+    background-color: #ADD8E6;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: large;
+    margin-bottom: 6px;
+}
+
+.header-logged-in a header{
+
+}
+
+.header-logged-in nav a{
+    color: orange;
+    font-style: italic;
+    padding: 2px;
+}
+
+.sidebar-menu nav ol {
+    list-style-type: none;
+}
+
+.caret-drop-down {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+
+.caret {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 5px solid transparent;
+}
+.caret.down{
+    border-top-color: black;
+}
+
+.caret.up{
+    border-bottom-color: black;
+}

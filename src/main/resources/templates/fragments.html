@@ -4,8 +4,66 @@
 <head th:fragment="head">
     <meta charset="UTF-8">
     <title th:text="${title}"></title>
+    <link rel="stylesheet" th:href="@{/styles.css}"/>
 </head>
 <body>
+
+<!--Header Fragment when artist logged in-->
+<div th:fragment="header-logged-in">
+    <div class="header-logged-in">
+        <a href="/wardrobe">
+            <header>wardrobe-img</header>
+        </a>
+        <nav>
+            <a href="/logout">
+                logout
+            </a>
+        </nav>
+    </div>
+</div>
+
+<div th:fragment="sidebar-menu">
+    <div class="sidebar-menu">
+        <nav>
+            <ol>
+                <li>
+                    <a href="/visitorview">view visitor view</a>
+                </li>
+                <li>
+                    <div class="caret-drop-down">
+                        <a>Artist Profile</a><span class="caret down"></span>
+                    </div>
+                    <ol>
+                        <li>
+                            <a>Artist Profile</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <div class="caret-drop-down">
+                        <a>Art</a><span class="caret down"></span>
+                    </div>
+                    <ol>
+                        <li>
+                            <a>View All Artwork</a>
+                        </li>
+                        <li>
+                            <div class="caret-drop-down">
+                            <a>View by Collection</a><span class="caret down"></span>
+                            </div>
+                            <ol th:each="collection : ${collections}">
+                                <li th:text="${collection.name}"></li>
+
+                            </ol>
+                        </li>
+                    </ol>
+                </li>
+
+            </ol>
+        </nav>
+    </div>
+
+</div>
 
 </body>
 </html>
