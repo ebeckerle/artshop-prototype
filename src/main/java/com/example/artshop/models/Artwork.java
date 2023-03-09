@@ -12,6 +12,9 @@ public class Artwork {
 
     private String name;
 
+    //ManytoOne
+    private Artist artist;
+
     //    @ManyToMany
     private List<Product> products;
 
