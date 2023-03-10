@@ -5,6 +5,22 @@
 <div th:replace="fragments :: header-logged-in"></div>
 <div class="main-contents">
     <div th:replace="fragments :: sidebar-menu"></div>
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            <div>
+                <input id="input-file" type="file" name="file" accept="image/png, image/jpeg" />
+                <button class="btn btn-sm btn-outline-success float-right" type="submit">
+                    Upload
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+
+
 </div>
 </body>
 </html>

@@ -14,17 +14,24 @@ public class Product {
     //    @ManyToOne
     private Artist artist;
 
-    //@OnetoOne
+    //@OnetoOne(cascade = CascadeType.PERSIST)
     private ProductType type;
 
-    //@ManytoMany
+    //@ManytoMany(cascade = CascadeType.PERSIST)
     private List<ProductCategory> categories;
 
-    //@OnetoMany
+    //@OnetoMany(cascade = CascadeType.ALL)
 //    private List<PurchaseLinks> links;
 
 //    private Boolean forSale;
 
+
+    public Product(String name, Artist artist, ProductType type, List<ProductCategory> categories) {
+        this.name = name;
+        this.artist = artist;
+        this.type = type;
+        this.categories = categories;
+    }
 
     public Integer getId() {
         return id;

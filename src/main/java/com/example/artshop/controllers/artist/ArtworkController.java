@@ -63,7 +63,17 @@ public class ArtworkController {
             return "artist/newartwork";
         }
 
-        //
+        //For the Image upload ...
+        String message = "";
+        try {
+            storageService.save(file);
+            message = "Uploaded the image successfully: " + file.getOriginalFilename();
+            model.addAttribute("message", message);
+        } catch (Exception e) {
+            message = "Could not upload the image: " + file.getOriginalFilename() + ". Error: " + e.getMessage();
+            model.addAttribute("message", message);
+        }
+
         return "artist/viewartwork";
     }
 

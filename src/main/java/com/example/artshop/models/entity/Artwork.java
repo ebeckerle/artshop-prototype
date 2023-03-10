@@ -1,6 +1,9 @@
 package com.example.artshop.models.entity;
 
 
+import com.example.artshop.models.dto.NewArtworkDTO;
+
+import java.util.ArrayList;
 import java.util.List;
 
 //@Entity
@@ -15,14 +18,28 @@ public class Artwork {
     //ManytoOne
     private Artist artist;
 
-    //    @ManyToMany
+    //    @OnetoMany(cascade = CascadeType.ALL)
     private List<Product> products;
 
     //@OnetoOne
     private String coverImage;
 
-//    @ManyToMany
+//    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Collection> collections;
+
+    public Artwork(NewArtworkDTO newArtworkForm, Artist artist){
+        this.name = newArtworkForm.getName();
+        this.artist = artist;
+        List<Product> products = new ArrayList<>();
+        if(newArtworkForm.getProductName1() != null){
+
+            Product newProduct = new Product(newArtworkForm.getName(),
+                    artist, newArtworkForm.getProductType1(),
+                    newArtworkForm.getProductCategories1());
+
+        }
+        this.products = products;
+    }
 
     public Integer getId() {
         return id;
