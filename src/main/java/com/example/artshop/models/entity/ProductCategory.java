@@ -1,4 +1,4 @@
-package com.example.artshop.models;
+package com.example.artshop.models.entity;
 
 
 import java.util.List;

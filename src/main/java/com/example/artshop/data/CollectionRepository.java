@@ -1,0 +1,13 @@
+package com.example.artshop.data;
+
+import com.example.artshop.models.entity.Artist;
+import com.example.artshop.models.entity.Collection;
+import org.springframework.data.repository.CrudRepository;
+
+import java.util.List;
+import java.util.Optional;
+
+public interface CollectionRepository extends CrudRepository<Collection, Integer> {
+
+    List<Collection> findByArtist(Artist artist);
+}

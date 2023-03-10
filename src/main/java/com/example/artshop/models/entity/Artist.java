@@ -1,24 +1,23 @@
-package com.example.artshop.models;
-
+package com.example.artshop.models.entity;
 
 import java.util.List;
 
 //@Entity
-public class Collection {
+public class Artist {
 
-//    @Id
+    //    @Id
 //    @GeneratedValue
     private Integer id;
 
     private String name;
 
-//    @ManyToMany
-    private List<Artwork> artworks;
+
+    //@OnetoMany
+    private List<Artwork> artwork;
 
     public Integer getId() {
         return id;
     }
-
 
     public String getName() {
         return name;
@@ -28,11 +27,11 @@ public class Collection {
         this.name = name;
     }
 
-    public List<Artwork> getArtworks() {
-        return artworks;
+    public List<Artwork> getArtwork() {
+        return artwork;
     }
 
-    public void setArtworks(List<Artwork> artworks) {
-        this.artworks = artworks;
+    public void setArtwork(List<Artwork> artwork) {
+        this.artwork = artwork;
     }
 }
