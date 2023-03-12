@@ -1,10 +1,12 @@
 package com.example.artshop.models.entity;
 
-//@Entity
+import jakarta.persistence.Entity;
+
+@Entity
 public class ProductType {
 
-    //    @Id
-//    @GeneratedValue
+        @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;

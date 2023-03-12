@@ -1,12 +1,16 @@
 package com.example.artshop.models.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
 import java.util.List;
 
-//@Entity
+@Entity
 public class Product {
 
-    //    @Id
-//    @GeneratedValue
+        @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;

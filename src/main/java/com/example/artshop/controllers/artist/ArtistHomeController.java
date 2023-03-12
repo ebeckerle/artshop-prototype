@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 //@RequestMapping("/wardrobe/{artistId}")
 public class ArtistHomeController {
 
-    @Autowired
-    private ArtistRepository artistRepository;
+//    @Autowired
+//    private ArtistRepository artistRepository;
 
     @GetMapping
     //@GetMapping("/{artistId}")

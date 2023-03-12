@@ -1,18 +1,23 @@
 package com.example.artshop.models.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import org.springframework.data.annotation.Id;
+
+
 import java.util.List;
 
-//@Entity
+@Entity
 public class Artist {
 
-    //    @Id
-//    @GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;
 
 
-    //@OnetoMany
+    @OnetoMany
     private List<Artwork> artwork;
 
     public Integer getId() {

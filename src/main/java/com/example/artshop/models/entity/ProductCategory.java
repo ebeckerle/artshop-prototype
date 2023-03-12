@@ -1,18 +1,23 @@
 package com.example.artshop.models.entity;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
+
 import java.util.List;
 
-//@Entity
+@Entity
 public class ProductCategory {
 
-    //    @Id
-//    @GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;
 
-//    @ManyToMany
+    @ManyToMany
     private List<Product> products;
 
     public Integer getId() {
