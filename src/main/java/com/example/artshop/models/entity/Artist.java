@@ -13,7 +13,14 @@ public class Artist {
     @GenericGenerator(name = "native", strategy = "native")
     private Integer id;
 
-    private String name;
+    private String firstName;
+    private String lastName;
+
+    private String username;
+
+    private String email;
+
+
 
 
     @OneToMany(cascade = CascadeType.PERSIST)
@@ -21,6 +28,8 @@ public class Artist {
 
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "artist")
     private List<Collection> collections;
+
+
 
 //    public Artist(){}
 
