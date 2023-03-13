@@ -2,29 +2,29 @@ package com.example.artshop.models.entity;
 
 
 import com.example.artshop.models.dto.NewArtworkDTO;
+import jakarta.persistence.*;
 
 import java.util.ArrayList;
 import java.util.List;
 
-//@Entity
+@Entity
 public class Artwork {
 
-    //    @Id
-//    @GeneratedValue
+    @Id
+    @GeneratedValue
     private Integer id;
 
     private String name;
 
-    //ManytoOne
+    @ManyToOne
     private Artist artist;
 
-    //    @OnetoMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL)
     private List<Product> products;
 
-    //@OnetoOne
     private String coverImage;
 
-//    @ManyToMany(cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<Collection> collections;
 
     public Artwork(NewArtworkDTO newArtworkForm, Artist artist){

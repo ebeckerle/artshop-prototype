@@ -1,9 +1,6 @@
 package com.example.artshop.models.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import org.springframework.data.annotation.Id;
-
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -17,8 +14,13 @@ public class Artist {
     private String name;
 
 
-    @OnetoMany
+    @OneToMany(cascade = CascadeType.PERSIST)
     private List<Artwork> artwork;
+
+    @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "artist")
+    private List<Collection> collections;
+
+//    public Artist(){}
 
     public Integer getId() {
         return id;
@@ -38,5 +40,13 @@ public class Artist {
 
     public void setArtwork(List<Artwork> artwork) {
         this.artwork = artwork;
+    }
+
+    public List<Collection> getCollections() {
+        return collections;
+    }
+
+    public void setCollections(List<Collection> collections) {
+        this.collections = collections;
     }
 }

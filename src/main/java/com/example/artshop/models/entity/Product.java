@@ -3,6 +3,8 @@ package com.example.artshop.models.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 
 import java.util.List;
 
@@ -15,16 +17,16 @@ public class Product {
 
     private String name;
 
-    //    @ManyToOne
+    @ManyToOne
     private Artist artist;
 
-    //@OnetoOne(cascade = CascadeType.PERSIST)
+    @OneToOne(cascade = CascadeType.PERSIST)
     private ProductType type;
 
-    //@ManytoMany(cascade = CascadeType.PERSIST)
+    @ManyToMany(cascade = CascadeType.PERSIST)
     private List<ProductCategory> categories;
 
-    //@OnetoMany(cascade = CascadeType.ALL)
+//    @OnetoMany(cascade = CascadeType.ALL)
 //    private List<PurchaseLinks> links;
 
 //    private Boolean forSale;

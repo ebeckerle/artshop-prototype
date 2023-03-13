@@ -13,9 +13,9 @@ import java.util.List;
 @ControllerAdvice("com.example.artshop.controllers.artist")
 public class ArtistAdviceController {
 
-//    @Autowired
-//    protected CollectionRepository collectionRepository;
-//
+    @Autowired
+    protected CollectionRepository collectionRepository;
+
 //    @ModelAttribute("collections")
 //    public List<Collection> getCollections(Artist artist){
 //        return collectionRepository.findByArtist(artist);

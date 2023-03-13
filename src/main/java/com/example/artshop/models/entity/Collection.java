@@ -1,11 +1,8 @@
 package com.example.artshop.models.entity;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.ManyToMany;
-import org.springframework.data.annotation.Id;
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 import java.util.List;
 
@@ -21,7 +18,7 @@ public class Collection {
     @ManyToMany
     private List<Artwork> artworks;
 
-    @ManytoOne
+    @ManyToOne
     private Artist artist;
 
     public Integer getId() {
