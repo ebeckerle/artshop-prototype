@@ -2,6 +2,7 @@ package com.example.artshop.controllers.artist;
 
 import com.example.artshop.data.ArtistRepository;
 import com.example.artshop.data.CollectionRepository;
+import com.example.artshop.models.entity.Artist;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -24,8 +25,8 @@ public class ArtistHomeController {
     public String displayArtistHomePage(Model model){
 //        public String displayArtistHomePage(Model model, @PathVariable Integer artistId){
 //        artistRepository.findById(artistId);
-
-        collectionRepository.findByArtist(Ar)
+//        Artist artist = new Artist();
+//        collectionRepository.findByArtist(artist);
 
 
         model.addAttribute("title", "Artist Home page");

@@ -1,6 +1,7 @@
 package com.example.artshop.models.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.GenericGenerator;
 
 import java.util.List;
 
@@ -8,7 +9,8 @@ import java.util.List;
 public class Artist {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy= GenerationType.AUTO, generator="native")
+    @GenericGenerator(name = "native", strategy = "native")
     private Integer id;
 
     private String name;
