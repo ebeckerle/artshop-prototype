@@ -20,8 +20,7 @@ public class Artist {
 
     private String email;
 
-
-
+    private String aboutMe;
 
     @OneToMany(cascade = CascadeType.PERSIST)
     private List<Artwork> artwork;
@@ -29,6 +28,9 @@ public class Artist {
     @OneToMany(cascade = CascadeType.PERSIST, mappedBy = "artist")
     private List<Collection> collections;
 
+    private String bannerImage;
+
+    private String backgroundColor;
 
 
 //    public Artist(){}
@@ -37,12 +39,44 @@ public class Artist {
         return id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getAboutMe() {
+        return aboutMe;
+    }
+
+    public void setAboutMe(String aboutMe) {
+        this.aboutMe = aboutMe;
     }
 
     public List<Artwork> getArtwork() {
@@ -59,5 +93,21 @@ public class Artist {
 
     public void setCollections(List<Collection> collections) {
         this.collections = collections;
+    }
+
+    public String getBannerImage() {
+        return bannerImage;
+    }
+
+    public void setBannerImage(String bannerImage) {
+        this.bannerImage = bannerImage;
+    }
+
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
     }
 }
