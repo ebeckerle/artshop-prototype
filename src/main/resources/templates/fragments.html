@@ -45,15 +45,34 @@
                     </div>
                     <ol>
                         <li>
-                            <a>View All Artwork</a>
+                            <a th:href="@{'/wardrobe/'+${artistId}+'/artwork'}">View All Artwork</a>
                         </li>
                         <li>
                             <div class="caret-drop-down">
                             <a>View by Collection</a><span class="caret down"></span>
                             </div>
                             <ol th:each="collection : ${collections}">
+                                <li th:text="${collection.name}">
+                                    <a th:href="@{'/wardrobe/'+${artistId}+'/collection'}">View All Artwork</a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <div class="caret-drop-down">
+                                <a>View by ProductType</a><span class="caret down"></span>
+                            </div>
+                            <ol th:each="type : ${productTypes}">
                                 <li th:text="${collection.name}"></li>
                             </ol>
+                        </li>
+                        <li>
+                            <a th:href="@{'/wardrobe/'+${artistId}+'/artwork/new'}">Create A New Artwork</a>
+                        </li>
+                        <li>
+                            <a th:href="@{'/wardrobe/'+${artistId}+'/collections'}">View Collections</a>
+                        </li>
+                        <li>
+                            <a th:href="@{'/wardrobe/'+${artistId}+'/collections/new'}">Create A New Collection</a>
                         </li>
                     </ol>
                 </li>
