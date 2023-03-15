@@ -19,6 +19,8 @@ public class NewArtworkDTO {
 
     public String productName1;
     public ProductType productType1;
+
+    public String newProductType1;
     public List<ProductCategory> productCategories1;
     public String newProductCategory1;
     public String product1PurchaseLink1;
@@ -91,6 +93,14 @@ public class NewArtworkDTO {
 
     public void setProductType1(ProductType productType1) {
         this.productType1 = productType1;
+    }
+
+    public String getNewProductType1() {
+        return newProductType1;
+    }
+
+    public void setNewProductType1(String newProductType1) {
+        this.newProductType1 = newProductType1;
     }
 
     public ProductType getProductType2() {

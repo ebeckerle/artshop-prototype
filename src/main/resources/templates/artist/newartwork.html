@@ -6,13 +6,66 @@
 <div class="main-contents">
     <div th:replace="fragments :: sidebar-menu"></div>
 
-    <div>
+    <div class="right-col-contents">
         <form method="post" enctype="multipart/form-data">
+            <div class="form-style1">
+                <label>Artwork Name:
+                    <input th:field="${newArtworkDTO.name}" class="form-control">
+                </label>
+                <p class="error" th:errors="${newArtworkDTO.name}"></p>
+            </div>
+
+
+
             <div>
-                <input id="input-file" type="file" name="file" accept="image/png, image/jpeg, image/jpg" />
-                <button class="btn btn-sm btn-outline-success float-right" type="submit">
-                    Upload
-                </button>
+                <label>Artwork Image:
+                    <input id="input-file" type="file" name="file" accept="image/png, image/jpeg, image/jpg" />
+                </label>
+            </div>
+
+            <div>
+                <label>Include in Collections?
+                    <br>
+                    <div th:each="collection,iterStat : ${collections}">
+                        <input type="checkbox" th:id="collection + ${iterStat.count}" th:name="collection + ${iterStat.count}" th:value="collection">
+                        <label th:for="collection + ${iterStat.count}" th:text="${collection.name}"> I have a bike</label><br>
+                    </div>
+                    <a th:href="@{'/wardrobe/'+${artistId}+'/collections/new'}" target="_blank">Create A New Collection</a>
+                </label>
+            </div>
+
+            <div>
+                <h3>Include A Product?</h3>
+                <div style="border: 2px solid gray;">
+                    <div>
+                        <label>Name:
+                            <input th:field="${newArtworkDTO.productName1}" placeholder="Artwork Name - Product Type">
+                        </label>
+                    </div>
+
+                    <div>
+                        <label>Product Type
+                            <select th:each="type : ${productTypes}" th:field="${newArtworkDTO.productType1}">
+                                <option th:text="${type.name}" th:value="${type}"></option>
+                            </select>
+                        </label>
+                        <div class="caret-drop-down">
+                        <span class="caret down"></span><a>new product type?</a>
+                        </div>
+                        <div style="background-color: gray;">
+                            <label>Name:
+                                <input th:field="${newArtworkDTO.newProductType1}">
+                            </label>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div>
+                <button type="submit">Create Artwork</button>
             </div>
 
         </form>

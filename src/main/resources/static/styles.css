@@ -7,6 +7,11 @@ body {
     display: flex;
 }
 
+.right-col-contents {
+    margin: 20px;
+
+}
+
 .header-logged-in{
     background-color: #ADD8E6;
     display: flex;
@@ -26,8 +31,19 @@ body {
     padding: 2px;
 }
 
+.sidebar-menu {
+    margin: 16px;
+
+}
+
 .sidebar-menu nav ol {
     list-style-type: none;
+    padding: 0px;
+}
+
+.sidebar-menu nav ol li {
+    padding-left: 16px;
+    margin-top: 4px;
 }
 
 .caret-drop-down {

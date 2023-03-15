@@ -1,5 +1,6 @@
 package com.example.artshop.controllers.artist;
 
+import com.example.artshop.models.dto.NewArtworkDTO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +23,14 @@ public class CollectionsController {
                                    @PathVariable("collectionId") Integer artworkId){
         model.addAttribute("title", "View A Collection");
         return "artist/viewcollection";
+    }
+
+    @GetMapping("/new")
+    public String displayCreateANewArtworkForm(Model model,
+                                               @PathVariable("artistId") Integer artistId){
+        model.addAttribute("title", "Create A New Collection");
+
+        return "artist/newcollection";
     }
 
 

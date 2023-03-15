@@ -64,17 +64,14 @@ public class ArtworkController {
         }
 
         //For the Image upload ...
-        System.out.println(" image");
         String message = "";
         try {
-            System.out.println("in the try");
             storageService.save(file);
-            newArtwork.setImage("uploads/"+file.getOriginalFilename());
-            System.out.println(newArtwork.getImage());
+            newArtwork.setImageFileLocation("uploads/"+file.getOriginalFilename());
+            System.out.println(newArtwork.getImageFileLocation());
             message = "Uploaded the image successfully: " + file.getOriginalFilename();
             model.addAttribute("message", message);
         } catch (Exception e) {
-            System.out.println("in the catch");
             message = "Could not upload the image: " + file.getOriginalFilename() + ". Error: " + e.getMessage();
             model.addAttribute("message", message);
         }
