@@ -71,10 +71,10 @@
                         </li>
                         <li>
                             <div class="caret-drop-down">
-                                <a>View by ProductType</a><span class="caret down"></span>
+                                <a>View by Product Category</a><span class="caret down"></span>
                             </div>
                             <ol th:each="category : ${productCategories}">
-                                <li th:text="${category.name}">
+                                <li>
                                     <a th:text="${category.name}"
                                        th:href="@{'/wardrobe/'+${artistId}+'/productcategory/'+${category.id}}"></a>
                                 </li>

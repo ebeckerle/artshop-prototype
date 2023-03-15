@@ -9,7 +9,7 @@ import java.util.List;
 public class NewArtworkDTO {
 
     public String name;
-    public String image;
+    public String imageFileLocation;
 
     public List<Collection> collections;
 
@@ -45,12 +45,12 @@ public class NewArtworkDTO {
         this.name = name;
     }
 
-    public String getImage() {
-        return image;
+    public String getImageFileLocation() {
+        return imageFileLocation;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setImageFileLocation(String imageFileLocation) {
+        this.imageFileLocation = imageFileLocation;
     }
 
     public List<Collection> getCollections() {

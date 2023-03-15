@@ -11,14 +11,13 @@ import java.util.stream.Stream;
 
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.UrlResource;
-import org.springframework.stereotype.Service;
 import org.springframework.util.FileSystemUtils;
 import org.springframework.web.multipart.MultipartFile;
 
 @Service
 public class FilesStorageServiceImpl implements FilesStorageService{
 
-    private final Path root = Paths.get("./uploads");
+    private final Path root = Paths.get("uploads");
 
     @Override
     public void init() {

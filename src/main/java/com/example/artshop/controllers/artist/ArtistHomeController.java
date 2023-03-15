@@ -28,28 +28,6 @@ public class ArtistHomeController {
     @Autowired
     private CollectionRepository collectionRepository;
 
-//    @GetMapping
-//    //@GetMapping("/{artistId}")
-////    public String displayArtistHomePage(Model model){
-//        public String displayArtistHomePage(Model model, @PathVariable Integer artistId){
-////        artistRepository.findById(artistId);
-////        Artist artist = new Artist();
-////        collectionRepository.findByArtist(artist);
-//
-//
-//        model.addAttribute("title", "Artist Home page");
-//
-////        model.addAttribute("collections");
-////        model.addAttribute("collections", "collections");
-//
-//        Artist artist = artistRepository.findById(artistId).get();
-//        model.addAttribute("collections", collectionRepository.findByArtist(artist));
-//
-////        model.addAttribute("collections", ArrayList<Collection> collections);
-//        return "artist/home";
-//    }
-
-
     @GetMapping
     public String displayArtistHomePage(Model model, @PathVariable Integer artistId,
                                         @ModelAttribute("collections") List<Collection> collections,
@@ -57,7 +35,6 @@ public class ArtistHomeController {
                                         @ModelAttribute("productCategories") List<ProductCategory> productCategories){
 
         model.addAttribute("title", "Artist Home page");
-
         return "artist/home";
     }
 
