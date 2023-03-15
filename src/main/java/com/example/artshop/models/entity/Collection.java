@@ -17,7 +17,7 @@ public class Collection {
 
     private String name;
 
-    @ManyToMany
+    @OneToMany
     private List<Artwork> artworks;
 
     @ManyToOne

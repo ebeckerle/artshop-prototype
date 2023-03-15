@@ -52,8 +52,9 @@
                             <a>View by Collection</a><span class="caret down"></span>
                             </div>
                             <ol th:each="collection : ${collections}">
-                                <li th:text="${collection.name}">
-                                    <a th:href="@{'/wardrobe/'+${artistId}+'/collection'}">View All Artwork</a>
+                                <li>
+                                    <a th:text="${collection.name}"
+                                       th:href="@{'/wardrobe/'+${artistId}+'/collections/'+${collection.id}}"></a>
                                 </li>
                             </ol>
                         </li>
@@ -62,7 +63,21 @@
                                 <a>View by ProductType</a><span class="caret down"></span>
                             </div>
                             <ol th:each="type : ${productTypes}">
-                                <li th:text="${collection.name}"></li>
+                                <li>
+                                    <a th:text="${type.name}"
+                                       th:href="@{'/wardrobe/'+${artistId}+'/producttype/'+${type.id}}"></a>
+                                </li>
+                            </ol>
+                        </li>
+                        <li>
+                            <div class="caret-drop-down">
+                                <a>View by ProductType</a><span class="caret down"></span>
+                            </div>
+                            <ol th:each="category : ${productCategories}">
+                                <li th:text="${category.name}">
+                                    <a th:text="${category.name}"
+                                       th:href="@{'/wardrobe/'+${artistId}+'/productcategory/'+${category.id}}"></a>
+                                </li>
                             </ol>
                         </li>
                         <li>
