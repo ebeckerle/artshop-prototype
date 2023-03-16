@@ -66,3 +66,17 @@ body {
 .caret.up{
     border-bottom-color: black;
 }
+
+.form-style1 {
+    background-color: #ECECEC;
+    padding: 12px 8px 12px 8px;
+}
+
+.form-style1 label {
+
+}
+
+.form-style1 label input {
+    width: 100%;
+    /*margin: 2px 4px 2px 4px;*/
+}
