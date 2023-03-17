@@ -1,18 +1,25 @@
 function autoFillProductName(){
     let existingProduct1Name = document.getElementById("product1Name").placeholder;
-    let existingArtworkName;
-    let existingProductType
+    let arrayProduct1Name = existingProduct1Name.split(" - ");
+    let existingArtworkName = arrayProduct1Name[0];
+    let existingProductType = arrayProduct1Name[1];
+    console.log(existingArtworkName);
     //if artworkName
-    let artworkName = document.getElementById("artworkName").value;
-    console.log(typeof artworkName);
-    if(artworkName != "" || artworkName != " "){
-        document.getElementById("product1Name").placeholder = artworkName + " - Product Type";
+    let artworkNameInput = document.getElementById("artworkName").value;
+    console.log(typeof artworkNameInput);
+    console.log("["+ artworkNameInput+"]");
+    if(artworkNameInput !== "" && artworkNameInput !== " "){
+        document.getElementById("product1Name").placeholder = artworkNameInput + " - " + existingProductType;
+    }
+    let product1TypeSelectedOption = document.getElementById("product1Type").value;
+    if(product1TypeSelectedOption !== ""){
+        document.getElementById("product1Name").placeholder = existingArtworkName + " - " + product1TypeSelectedOption;
     }
 
-
     let product1NewType = document.getElementById("product1NewType").value;
-    if(product1NewType != "" && product1NewType != " "){
+    if(product1NewType !== "" && product1NewType !== " "){
         console.log(product1NewType);
+        document.getElementById("product1Name").placeholder = existingArtworkName + " - " + product1NewType;
     }
 
 }

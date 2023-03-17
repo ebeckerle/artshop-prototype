@@ -38,7 +38,7 @@
                 <h3>Include A Product?</h3>
                 <div style="border: 2px solid gray;">
                     <div>
-                        <label>Name:
+                        <label>Product Name:
                             <input th:field="${newArtworkDTO.productName1}" placeholder="Artwork Name - Product Type" id="product1Name">
                         </label>
                     </div>
@@ -46,7 +46,10 @@
                     <div>
                         <label>Product Type
                             <select th:each="type : ${productTypes}" th:field="${newArtworkDTO.productType1}" onchange="autoFillProductName()" id="product1Type">
-                                <option th:text="${type.name}" th:value="${type}"></option>
+                                <option style="color: gray;" value="" selected hidden>select product type</option>
+                                <option value="Mug">Mug</option>
+                                <option value="Wall Hanging">Wall Hanging</option>
+                                <option th:text="${type.name}" th:value="${type.name}"></option>
                             </select>
                         </label>
                         <div class="caret-drop-down">

@@ -80,3 +80,9 @@ body {
     width: 100%;
     /*margin: 2px 4px 2px 4px;*/
 }
+
+#placeholder-option {
+    color: gray;
+    font-size: small;
+    font-style: italic;
+}
