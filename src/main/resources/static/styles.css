@@ -8,21 +8,24 @@ body {
 }
 
 .right-col-contents {
-    margin: 20px;
+    margin: 0px;
+    box-shadow: 0 4px 8px 0 #ffd400 inset, 0 6px 20px 0 #ffd400 inset;
+    min-width: 80%;
+    justify-contents: center;
 
 }
 
 .header-logged-in{
-    background-color: #ADD8E6;
     display: flex;
     justify-content: space-between;
-    padding: 10px;
+    padding: 5px;
     font-size: large;
-    margin-bottom: 6px;
+    /*margin-bottom: 6px;*/
+    border-bottom: 4px solid #ffd400;
 }
 
 .header-logged-in a header{
-
+    margin-left: 16px;
 }
 
 .header-logged-in nav a{
