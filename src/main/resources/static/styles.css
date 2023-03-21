@@ -9,9 +9,10 @@ body {
 
 .right-col-contents {
     margin: 0px;
-    box-shadow: 0 4px 8px 0 #ffd400 inset, 0 6px 20px 0 #ffd400 inset;
+    box-shadow: 0 4px 8px 0 #fff0a6 inset, 0 6px 20px 0 #fff0a6 inset;
     min-width: 80%;
     justify-contents: center;
+    padding: 20px;
 
 }
 
@@ -80,7 +81,7 @@ body {
 }
 
 .form-style1 label input {
-    width: 100%;
+    /*width: 100%;*/
     /*margin: 2px 4px 2px 4px;*/
 }
 
