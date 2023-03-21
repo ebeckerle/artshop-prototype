@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    /*font-family: tahoma, sans-serif;*/
 }
 
 .main-contents {
@@ -37,7 +38,6 @@ body {
 
 .sidebar-menu {
     margin: 16px;
-
 }
 
 .sidebar-menu nav ol {
@@ -48,6 +48,11 @@ body {
 .sidebar-menu nav ol li {
     padding-left: 16px;
     margin-top: 4px;
+}
+
+#visitor-view-link {
+    font-size: small;
+
 }
 
 .caret-drop-down {
@@ -72,6 +77,11 @@ body {
 }
 
 .form-style1 {
+    background-color: #ECECEC;
+    padding: 12px 8px 12px 8px;
+}
+
+.form-style1 div {
     background-color: #ECECEC;
     padding: 12px 8px 12px 8px;
 }
