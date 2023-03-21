@@ -31,27 +31,39 @@
                 <li>
                     <a id="visitor-view-link" href="/visitorview">view visitor view</a>
                 </li>
+                <br>
                 <li>
-                    <div class="caret-drop-down">
-                        <a>Artist Profile</a><span class="caret down"></span>
+                    <div class="side-menu-heading">
+                        <div class="caret-drop-down">
+                            <a>Artist Profile</a><span class="caret down"></span>
+                        </div>
                     </div>
                     <ol>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <a>Artist Profile</a>
+                            </div>
                         </li>
+
                     </ol>
                 </li>
                 <li>
+                    <div class="side-menu-heading">
                     <div class="caret-drop-down">
                         <a>Art</a><span class="caret down"></span>
                     </div>
+                    </div>
                     <ol>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <a th:href="@{'/wardrobe/'+${artistId}+'/artwork'}">View All Artwork</a>
+                            </div>
                         </li>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <div class="caret-drop-down">
                             <a>View by Collection</a><span class="caret down"></span>
+                            </div>
                             </div>
                             <ol th:each="collection : ${collections}">
                                 <li>
@@ -61,8 +73,10 @@
                             </ol>
                         </li>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <div class="caret-drop-down">
-                                <a>View by ProductType</a><span class="caret down"></span>
+                                <a>View by Product Type</a><span class="caret down"></span>
+                            </div>
                             </div>
                             <ol th:each="type : ${productTypes}">
                                 <li>
@@ -72,8 +86,10 @@
                             </ol>
                         </li>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <div class="caret-drop-down">
                                 <a>View by Product Category</a><span class="caret down"></span>
+                            </div>
                             </div>
                             <ol th:each="category : ${productCategories}">
                                 <li>
@@ -83,13 +99,19 @@
                             </ol>
                         </li>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <a th:href="@{'/wardrobe/'+${artistId}+'/artwork/new'}">Create A New Artwork</a>
+                            </div>
                         </li>
                         <li>
-                            <a th:href="@{'/wardrobe/'+${artistId}+'/collections'}">View Collections</a>
+                            <div class="side-menu-sub-heading">
+                            <a th:href="@{'/wardrobe/'+${artistId}+'/collections'}">View All Collections</a>
+                            </div>
                         </li>
                         <li>
+                            <div class="side-menu-sub-heading">
                             <a th:href="@{'/wardrobe/'+${artistId}+'/collections/new'}">Create A New Collection</a>
+                            </div>
                         </li>
                     </ol>
                 </li>
