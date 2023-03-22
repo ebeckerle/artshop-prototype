@@ -1,26 +1,113 @@
+h1, h2, h3, h4, h5, h6 {
+     margin: inherit;
+}
+
+
 .background {
-    background-color: blue;
+    background-color: #303b5a;
     display: flex;
     justify-content: center;
+    align-items: stretch;
+    height: 100%;
+    min-height: 100vh;
+    /*height: 100%;*/
+    width: 100vw;
 }
 
 .center-panel {
     background-color: light-blue;
     width: 80%;
+    /*min-height: inherit;*/
+    box-shadow: 0 4px 16px 20px #27314e, 0 6px 16px 20px #27314e;
+
 }
 
 .banner {
-
+    background-color: #303b5a;
+    padding: 4px 8px 4px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
 }
 
-.template1-menu
+
+
+.template1-menu {
+    height: 6vh;
+}
+
+.template1-menu nav {
+    height: inherit;
+}
 
 .template1-menu nav ol {
+    margin: 0;
+    padding: 0;
     list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+    height: inherit;
+    /*text-align: center;*/
 }
 
 .template1-menu nav ol li {
     color: white;
     font-weight: bold;
-    display: inline;
+    /*display: inline-block;*/
+    min-width: 33.33%;
+    display: flex;
+    justify-content: center;
+    /*align-items: flex-end;*/
+    align-items: baseline;
+    height: inherit;
 }
+
+.template1-menu nav ol li a {
+    /display: inline-block;
+    /*float: left;*/
+    /*margin-bottom: 0px;*/
+    /*padding-top: 8px;
+    border: 0px;
+    color: brown;*/
+    /*position: relative;*/
+    height: 100%;
+    margin: 0px;
+    margin-inline: 0px 0px;
+}
+
+.template1-menu nav ol li a:hover {
+    text-decoration: underline;
+}
+
+#trial {
+    color: green;
+    /*padding-top: 34px;*/
+}
+
+
+#menu-opt1 {
+    background-color: #7285b9;
+}
+
+#menu-opt2 {
+    background-color: #5d6ea1;
+}
+
+#menu-opt3 {
+    background-color: #4d6093;
+}
+
+.template1-menu nav ol li a {
+    padding: 4px 6px 20px 6px;
+}
+
+.contents-opt2 {
+    padding: 16px;
+    margin: 0px;
+    background-color: #5d6ea1;
+    height: 84vh;
+    /*min-height: inherit;*/
+    /*min-height: 90%;*/
+}
+

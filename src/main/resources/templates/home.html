@@ -12,15 +12,20 @@
 
 <div class="background">
     <div class="center-panel">
-        <div class="banner">BANNER</div>
+        <div class="banner">
+            <header>ARTIST</header>
+        </div>
         <div class="template1-menu">
             <nav>
                 <ol>
-                    <li th:text="menuTitle1"></li>
-                    <li th:text="menuTitle2"></li>
-                    <li th:text="menuTitle3"></li>
+                    <li id="menu-opt1"><a th:text="${menuTitle1}"></a></li>
+                    <li id="menu-opt2"><a id="trial" th:text="${menuTitle2}"></a></li>
+                    <li id="menu-opt3"><a th:text="${menuTitle3}"></a></li>
                 </ol>
             </nav>
+        </div>
+        <div class="contents-opt2">
+            <h2>ART</h2>
         </div>
 
     </div>
