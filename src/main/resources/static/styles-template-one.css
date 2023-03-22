@@ -1,0 +1,26 @@
+.background {
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+}
+
+.center-panel {
+    background-color: light-blue;
+    width: 80%;
+}
+
+.banner {
+
+}
+
+.template1-menu
+
+.template1-menu nav ol {
+    list-style-type: none;
+}
+
+.template1-menu nav ol li {
+    color: white;
+    font-weight: bold;
+    display: inline;
+}
