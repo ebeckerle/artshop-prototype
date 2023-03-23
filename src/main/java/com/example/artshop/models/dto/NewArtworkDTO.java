@@ -3,20 +3,26 @@ package com.example.artshop.models.dto;
 import com.example.artshop.models.entity.Collection;
 import com.example.artshop.models.entity.ProductCategory;
 import com.example.artshop.models.entity.ProductType;
+import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.Size;
 
 import java.util.List;
 
 public class NewArtworkDTO {
 
+    @Size(min = 1, max = 40, message = "must be between 1 and 40 characters")
     public String name;
     public String imageFileLocation;
 
     public List<Collection> collections;
 
+    @Size(min = 1, max = 40)
     public String newCollectionName;
 
+    @Max(3)
     public Integer numberOfProducts;
 
+    @Size(min = 1, max = 50)
     public String productName1;
     public ProductType productType1;
 

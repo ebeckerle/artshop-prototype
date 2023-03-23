@@ -9,7 +9,6 @@
     <div class="right-col-contents">
         <h3>Create A New Artwork</h3>
         <form class="form-style1" method="post" enctype="multipart/form-data">
-            <form class="form-style1" method="post" th:action="" enctype="multipart/form-data">
             <div class="form-style1">
                 <label>Artwork Name:
                     <input th:field="${newArtworkDTO.name}" class="form-control" onchange="autoFillProductName()" id="artworkName">
@@ -45,7 +44,7 @@
                             <select th:each="type : ${productTypes}" th:field="${newArtworkDTO.productType1}" onchange="autoFillProductName()" id="product1Type">
                                 <option value="" selected hidden>select product type</option>
                                 <option value="Mug">Mug</option>
-                                <option value="Wall Hanging">Wall Hanging</option>
+<!--                                <option value="WallHanging">Wall Hanging</option>-->
                                 <option th:text="${type.name}" th:value="${type.name}"></option>
                             </select>
                         </label>

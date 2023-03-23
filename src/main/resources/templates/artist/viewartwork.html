@@ -8,6 +8,9 @@
   <div class="right-col-contents">
     <h3>View single artwork view here</h3>
     <p th:text="${message}"></p>
+    <div th:if="${success}">
+      <p th:text="${success}"></p>
+    </div>
   </div>
 </div>
 </body>

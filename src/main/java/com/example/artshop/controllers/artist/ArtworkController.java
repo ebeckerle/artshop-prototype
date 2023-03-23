@@ -48,53 +48,21 @@ public class ArtworkController {
         return "artist/editartwork";
     }
 
-//    @PostMapping("/new")
-////    @PostMapping("/new/{artworkId}")
-//    //not sure how I am going to do this - need that artwork path variable that is just newly
-//    // created to render the view, so maybe a th:action is necessary? or also should I use a redirect view?
-//    public String processCreateANewArtworkForm(Model model,
-//                                               @PathVariable("artistId") Integer artistId,
-//                                               @ModelAttribute @Valid NewArtworkDTO newArtwork,
-//                                               Errors errors,
-//                                               @RequestParam("file") MultipartFile file){
-//        model.addAttribute("title", "Create A New Artwork");
-//
-//        if(errors.hasErrors()){
-//            model.addAttribute("title", "Create A New Artwork");
-//            model.addAttribute(newArtwork);
-//            return "artist/newartwork";
-//        }
-//
-//        //For the Image upload ...
-//        String message = "";
-//        try {
-//            storageService.save(file);
-//            newArtwork.setImageFileLocation("uploads/"+file.getOriginalFilename());
-//            System.out.println(newArtwork.getImageFileLocation());
-//            message = "Uploaded the image successfully: " + file.getOriginalFilename();
-//            model.addAttribute("message", message);
-//        } catch (Exception e) {
-//            message = "Could not upload the image: " + file.getOriginalFilename() + ". Error: " + e.getMessage();
-//            model.addAttribute("message", message);
-//        }
-//
-//        return "artist/viewartwork";
-//    }
-
-
     @PostMapping("/new")
-    public RedirectView processCreateANewArtworkForm(Model model,
-                                                     @PathVariable("artistId") Integer artistId,
-                                                     @ModelAttribute @Valid NewArtworkDTO newArtwork,
-                                                     Errors errors,
-                                                     @RequestParam("file") MultipartFile file,
-                                                     RedirectAttributes redirectAttributes){
+//    @PostMapping("/success")
+    //not sure how I am going to do this - need that artwork path variable that is just newly
+    // created to render the view, so maybe a th:action is necessary? or also should I use a redirect view?
+    public String processCreateANewArtworkForm(Model model,
+                                               @PathVariable("artistId") Integer artistId,
+                                               @ModelAttribute @Valid NewArtworkDTO newArtwork,
+                                               Errors errors,
+                                               @RequestParam("file") MultipartFile file){
         model.addAttribute("title", "Create A New Artwork");
 
         if(errors.hasErrors()){
             model.addAttribute("title", "Create A New Artwork");
             model.addAttribute(newArtwork);
-            return new RedirectView("artist/newartwork", true);
+            return "artist/newartwork";
         }
 
         //For the Image upload ...
@@ -110,10 +78,45 @@ public class ArtworkController {
             model.addAttribute("message", message);
         }
 
-        redirectAttributes.addFlashAttribute("message-2", "SUCCESS!!!");
+        model.addAttribute("success", "SUCCESS!!!");
 
-        return new RedirectView("artist/viewartwork", true);
+        return "artist/viewartwork";
     }
+
+
+//    @PostMapping("/new")
+//    public RedirectView processCreateANewArtworkForm(Model model,
+//                                                     @PathVariable("artistId") Integer artistId,
+//                                                     @ModelAttribute @Valid NewArtworkDTO newArtwork,
+//                                                     Errors errors,
+//                                                     @RequestParam("file") MultipartFile file,
+//                                                     RedirectAttributes redirectAttributes){
+//        model.addAttribute("title", "Create A New Artwork");
+//
+//        if(errors.hasErrors()){
+//            model.addAttribute("title", "Create A New Artwork");
+////            model.addAttribute(newArtwork);
+//            redirectAttributes.addFlashAttribute(newArtwork);
+//            return new RedirectView("/wardrobe/{artistId}/artwork/new", true);
+//        }
+//
+//        //For the Image upload ...
+//        String message = "";
+//        try {
+//            storageService.save(file);
+//            newArtwork.setImageFileLocation("uploads/"+file.getOriginalFilename());
+//            System.out.println(newArtwork.getImageFileLocation());
+//            message = "Uploaded the image successfully: " + file.getOriginalFilename();
+//            model.addAttribute("message", message);
+//        } catch (Exception e) {
+//            message = "Could not upload the image: " + file.getOriginalFilename() + ". Error: " + e.getMessage();
+//            model.addAttribute("message", message);
+//        }
+//        Integer artworkId = 2;
+//        redirectAttributes.addFlashAttribute("success", "SUCCESS!!!");
+//
+//        return new RedirectView("/wardrobe/{artistId}/artwork/"+artworkId, true);
+//    }
 
 
 

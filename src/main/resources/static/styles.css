@@ -137,3 +137,7 @@ body {
     /*margin: 2px 4px 2px 4px;*/
 }
 
+.error {
+    color: red;
+}
+
