@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title th:text="${title}"></title>
     <link rel="stylesheet" th:href="@{/styles.css}"/>
+    <link rel="stylesheet" th:href="@{/styles-template-one.css}"/>
     <script th:src="@{/script-newartworkform.js}"></script>
 </head>
 <body>
@@ -12,7 +13,7 @@
 <!--Header Fragment when artist logged in-->
 <div th:fragment="header-logged-in">
     <div class="header-logged-in">
-        <a href="/wardrobe">
+        <a th:href="@{'/wardrobe/'+${artistId}}">
             <header><img src="/images/wardrobe.jpg" alt="wardrobe" height="40"></header>
 <!--            <header>img-wardrobe</header>-->
         </a>
@@ -29,7 +30,7 @@
         <nav>
             <ol>
                 <li>
-                    <a id="visitor-view-link" href="/visitorview">view visitor view</a>
+                    <a id="visitor-view-link" th:href="@{'/wardrobe/'+${artistId}+'/visitorview'}">view visitor view</a>
                 </li>
                 <br>
                 <li>

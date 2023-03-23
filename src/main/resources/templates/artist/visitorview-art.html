@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head th:replace="fragments :: head"></head>
+<body>
+<div th:replace="fragments :: header-logged-in"></div>
+<div class="main-contents">
+  <div th:replace="fragments :: sidebar-menu"></div>
+  <div class="right-col-contents" id="r-col-contents-visitor-view">
+    <div th:replace="home :: visitor-view">>
+
+    </div>
+
+  </div>
+</div>
+</body>
+</html>

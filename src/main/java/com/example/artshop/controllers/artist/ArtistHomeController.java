@@ -38,6 +38,25 @@ public class ArtistHomeController {
         return "artist/home";
     }
 
+    @GetMapping("/visitorview")
+    public String displayArtistVisitorView(Model model, @PathVariable Integer artistId,
+                                        @ModelAttribute("collections") List<Collection> collections,
+                                        @ModelAttribute("productTypes") List<ProductType> productTypes,
+                                        @ModelAttribute("productCategories") List<ProductCategory> productCategories){
+
+        model.addAttribute("title", "Artist Home page");
+        model.addAttribute("menuTitle1", "About");
+        model.addAttribute("menuTitle2", "Art");
+        model.addAttribute("menuTitle3", "Blog");
+        model.addAttribute("menuTitle1", "About");
+        model.addAttribute("menuTitle2", "Art");
+        model.addAttribute("menuTitle3", "Blog");
+
+        return "artist/visitorview-art";
+    }
+
+
+
 
 //    @GetMapping
 //    public String displayArtistHomePage(Model model, @PathVariable Integer artistId,

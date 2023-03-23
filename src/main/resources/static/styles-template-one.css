@@ -18,7 +18,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: light-blue;
     width: 80%;
     /*min-height: inherit;*/
-    box-shadow: 0 4px 16px 20px #27314e, 0 6px 16px 20px #27314e;
+    /*box-shadow: 0 4px 16px 20px #27314e, 0 6px 16px 20px #27314e;*/
+    /*box-shadow: 6px 0px 16px 20px #27314e;*/
+    box-shadow: -40px 0px 16px -10px #27314e, 40px 0px 16px -10px #27314e;
 
 }
 
@@ -72,17 +74,15 @@ h1, h2, h3, h4, h5, h6 {
     color: brown;*/
     /*position: relative;*/
     height: 100%;
+    width: 100%;
+    text-align: center;
+    line-height: 175%;
     margin: 0px;
     margin-inline: 0px 0px;
 }
 
 .template1-menu nav ol li a:hover {
     text-decoration: underline;
-}
-
-#trial {
-    color: green;
-    /*padding-top: 34px;*/
 }
 
 

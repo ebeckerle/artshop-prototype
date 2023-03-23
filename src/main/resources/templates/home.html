@@ -10,7 +10,7 @@
 </head>
 <body>
 
-<div class="background">
+<div th:fragment="visitor-view" class="background">
     <div class="center-panel">
         <div class="banner">
             <header>ARTIST</header>
@@ -18,8 +18,8 @@
         <div class="template1-menu">
             <nav>
                 <ol>
-                    <li id="menu-opt1"><a th:text="${menuTitle1}"></a></li>
-                    <li id="menu-opt2"><a id="trial" th:text="${menuTitle2}"></a></li>
+                    <li id="menu-opt1"><a th:text="${menuTitle1}" ></a></li>
+                    <li id="menu-opt2"><a th:text="${menuTitle2}"></a></li>
                     <li id="menu-opt3"><a th:text="${menuTitle3}"></a></li>
                 </ol>
             </nav>

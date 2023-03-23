@@ -15,7 +15,10 @@ body {
     min-width: 75%;
     justify-contents: center;
     padding: 20px;
+}
 
+#r-col-contents-visitor-view {
+    padding: 0px;
 }
 
 .header-logged-in{
