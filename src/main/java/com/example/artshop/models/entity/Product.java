@@ -28,8 +28,9 @@ public class Product {
     @ManyToMany(cascade = CascadeType.PERSIST)
     private List<ProductCategory> categories;
 
-//    @OnetoMany(cascade = CascadeType.ALL)
-//    private List<PurchaseLinks> links;
+//    @OneToMany(cascade = CascadeType.ALL)
+    @ElementCollection
+    private List<String> purchaseLinks;
 
 //    private Boolean forSale;
 
@@ -76,5 +77,13 @@ public class Product {
 
     public void setCategories(List<ProductCategory> categories) {
         this.categories = categories;
+    }
+
+    public List<String> getPurchaseLinks() {
+        return purchaseLinks;
+    }
+
+    public void setPurchaseLinks(List<String> purchaseLinks) {
+        this.purchaseLinks = purchaseLinks;
     }
 }
