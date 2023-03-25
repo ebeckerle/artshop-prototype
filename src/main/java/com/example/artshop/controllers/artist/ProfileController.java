@@ -11,11 +11,11 @@ public class ProfileController {
 
     @GetMapping("/edit")
     public String displayEditArtistProfile(Model model){
-        return "editprofile";
+        return "artist/editprofile";
     }
 
     @GetMapping("/template/edit")
     public String displayEditArtistsViewTemplateChoices(Model model){
-        return "edittemplate";
+        return "artist/edittemplate";
     }
 }
