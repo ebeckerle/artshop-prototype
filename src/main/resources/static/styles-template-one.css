@@ -9,14 +9,16 @@ h1, h2, h3, h4, h5, h6 {
     justify-content: center;
     align-items: stretch;
     height: 100%;
-    min-height: 100vh;
+    /*min-height: 100vh;*/
     /*height: 100%;*/
-    width: 100vw;
+    /*width: 100vw;*/
+    width: 100%;
 }
 
 .center-panel {
     background-color: light-blue;
     width: 80%;
+    height: inherit;
     /*min-height: inherit;*/
     /*box-shadow: 0 4px 16px 20px #27314e, 0 6px 16px 20px #27314e;*/
     /*box-shadow: 6px 0px 16px 20px #27314e;*/
