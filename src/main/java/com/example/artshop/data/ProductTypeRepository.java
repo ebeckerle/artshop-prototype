@@ -16,7 +16,7 @@ public interface ProductTypeRepository extends CrudRepository<ProductType, Integ
 //            nativeQuery = true)
 //    List<String> findAllProductTypeNamesByArtistId(@Param("artistId") Integer artistId);
 
-    @Query(value = "SELECT * FROM product_type WHERE id=(SELECT type_id FROM product WHERE artist_id= :artistId)",
+    @Query(value = "SELECT * FROM product_type WHERE id IN (SELECT type_id FROM product WHERE artist_id= :artistId)",
             nativeQuery = true)
     List<ProductType> findAllProductTypesByArtistId(@Param("artistId") Integer artistId);
 
