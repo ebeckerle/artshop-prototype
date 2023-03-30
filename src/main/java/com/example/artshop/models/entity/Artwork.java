@@ -34,11 +34,10 @@ public class Artwork {
         this.artist = artist;
         List<Product> products = new ArrayList<>();
         if(newArtworkForm.getProductName1() != null){
-
             Product newProduct = new Product(newArtworkForm.getName(),
                     artist, newArtworkForm.getProductType1(),
                     newArtworkForm.getProductCategories1());
-
+            products.add(newProduct);
         }
         this.products = products;
     }

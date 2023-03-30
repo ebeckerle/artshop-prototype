@@ -1,6 +1,10 @@
 package com.example.artshop.controllers.artist;
 
+import com.example.artshop.data.ArtistRepository;
+import com.example.artshop.data.ArtworkRepository;
 import com.example.artshop.models.dto.NewArtworkDTO;
+import com.example.artshop.models.entity.Artwork;
+import com.example.artshop.models.pojo.TileList;
 import com.example.artshop.service.FilesStorageService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,9 +24,17 @@ public class ArtworkController {
     @Autowired
     FilesStorageService storageService;
 
+    @Autowired
+    ArtistRepository artistRepository;
+
+    @Autowired
+    ArtworkRepository artworkRepository;
+
     @GetMapping
     public String displayAllArtwork(Model model, @PathVariable("artistId") Integer artistId){
         model.addAttribute("title", "View All Artwork");
+
+//        TileList allArtworkInTiles = new TileList("All Artwork", )
         return "artist/viewallartwork";
     }
 
@@ -77,6 +89,17 @@ public class ArtworkController {
             message = "Could not upload the image: " + file.getOriginalFilename() + ". Error: " + e.getMessage();
             model.addAttribute("message", message);
         }
+
+        //convert the new Artwork DTO to an Artwork
+        System.out.println("ARTWORK CONTROLLER");
+        System.out.println(newArtwork.getProductName1());
+
+        Artwork artwork = new Artwork(newArtwork, artistRepository.findById(artistId).get());
+
+        System.out.println(artwork.getProducts().size());
+
+        //save the new artwork
+        artworkRepository.save(artwork);
 
         model.addAttribute("success", "SUCCESS!!!");
 
