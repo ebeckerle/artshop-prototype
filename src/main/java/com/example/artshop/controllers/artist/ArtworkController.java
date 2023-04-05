@@ -33,7 +33,7 @@ public class ArtworkController {
     @GetMapping
     public String displayAllArtwork(Model model, @PathVariable("artistId") Integer artistId){
         model.addAttribute("title", "View All Artwork");
-
+model.addAttribute()
 //        TileList allArtworkInTiles = new TileList("All Artwork", )
         return "artist/viewallartwork";
     }
